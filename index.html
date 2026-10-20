@@ -203,7 +203,6 @@ html.still{scroll-behavior:auto}
 
 <canvas id="bg-cv" aria-hidden="true"></canvas>
 <canvas id="fx-cv" aria-hidden="true"></canvas>
-<button class="motion" id="motion" type="button"></button>
 <div class="prog" id="prog"></div>
 <div class="reticle" id="reticle" aria-hidden="true">
   <svg viewBox="0 0 46 46"><circle cx="23" cy="23" r="15" fill="none" stroke="#c89b2c" stroke-width="1.4" stroke-dasharray="6 4"/><path d="M23 0v10M23 36v10M0 23h10M36 23h10" stroke="#0e2a22" stroke-width="1.4"/><circle cx="23" cy="23" r="1.8" fill="#d9503f"/></svg>
@@ -439,9 +438,7 @@ html.still{scroll-behavior:auto}
 <script>
 (function(){
 const C={bg:'#0f3329',panel:'#0f3329',panel2:'#174337',ink:'#f6f1e3',muted:'#9fbcae',line:'#2a5a4b',gold:'#e2b84a',mint:'#7fdca4',red:'#ff6b5b',deep:'#0e2a22',green:'#1e6b50',goldD:'#c89b2c'};
-let pref=null;try{pref=localStorage.getItem('motion')}catch(e){}
-const reduce=pref==='off'||(matchMedia('(prefers-reduced-motion: reduce)').matches&&pref!=='on');
-if(reduce)document.documentElement.classList.add('still');
+const reduce=false;
 const R=Math.random;
 const G=()=>{let u=0,v=0;while(!u)u=R();while(!v)v=R();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)};
 const rng=s=>()=>(s=(s*16807)%2147483647)/2147483647;
@@ -798,9 +795,7 @@ if(!reduce)requestAnimationFrame(loop);
   addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;el.classList.toggle('hot',!!e.target.closest('a,button,canvas'))});
   (function f(){x+=(mx-x)*.25;y+=(my-y)*.25;el.style.transform=`translate(${x}px,${y}px)`;rc.textContent=`${String(Math.round(mx)).padStart(4,'0')}·${String(Math.round(my+scrollY)).padStart(4,'0')}`;requestAnimationFrame(f)})()})();
 
-/* ---------- motion toggle ---------- */
-(function(){const b=document.getElementById('motion');b.textContent=reduce?'▶ Turn on animations':'❚❚ Pause animations';
-  b.addEventListener('click',()=>{try{localStorage.setItem('motion',reduce?'on':'off')}catch(e){}location.reload()})})();
+
 
 /* ---------- copy email ---------- */
 (function(){const b=document.getElementById('copy'),em=document.getElementById('email');
@@ -872,7 +867,7 @@ document.querySelectorAll('.ch h2').forEach(h=>{let i=0;h.innerHTML=h.textConten
 
 /* ---------- magnetic buttons ---------- */
 (function(){if(reduce||!matchMedia('(pointer: fine)').matches)return;
-  document.querySelectorAll('.btn,.chip,.motion,.copy').forEach(el=>{
+  document.querySelectorAll('.btn,.chip,.copy').forEach(el=>{
     el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();el.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.3}px,${(e.clientY-r.top-r.height/2)*.4}px)`});
     el.addEventListener('pointerleave',()=>{el.style.transform=''})})})();
 })();

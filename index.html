@@ -212,8 +212,8 @@ html.still{scroll-behavior:auto}
 <nav><div class="wrap">
   <a class="logo" href="#top">Daniel Coutinho<i>.</i></a>
   <ul class="idx" id="idx">
-    <li><a href="#redline">01</a></li><li><a href="#pairs">02</a></li><li><a href="#btc">03</a></li><li><a href="#rl">04</a></li>
-    <li><a href="#turret">05</a></li><li><a href="#screener">06</a></li><li><a href="#wins">Wins</a></li><li><a href="#about">About</a></li>
+    <li><a href="#turret">01</a></li><li><a href="#redline">02</a></li><li><a href="#pairs">03</a></li><li><a href="#btc">04</a></li>
+    <li><a href="#rl">05</a></li><li><a href="#screener">06</a></li><li><a href="#wins">Wins</a></li><li><a href="#about">About</a></li>
   </ul>
 </div></nav>
 
@@ -231,9 +231,9 @@ html.still{scroll-behavior:auto}
     </div>
     <div class="jump">
       <a class="chip hot" href="#redline"><b>NEW</b>Redline · HackRU</a>
-      <a class="chip" href="#pairs"><b>02</b>Pair trading</a>
-      <a class="chip" href="#btc"><b>03</b>Bitcoin bot</a>
-      <a class="chip" href="#rl"><b>04</b>RL racing agent</a>
+      <a class="chip" href="#pairs"><b>03</b>Pair trading</a>
+      <a class="chip" href="#btc"><b>04</b>Bitcoin bot</a>
+      <a class="chip" href="#rl"><b>05</b>RL racing agent</a>
     </div>
   </div>
   <div class="tape" aria-hidden="true"><div class="tape-in">
@@ -243,11 +243,34 @@ html.still{scroll-behavior:auto}
 </header>
 
 <main>
-<!-- 01 REDLINE -->
-<section class="ch" id="redline"><div class="wrap">
+<!-- 01 TURRET -->
+<section class="ch" id="turret"><div class="wrap">
   <div class="ch-num" aria-hidden="true">01</div>
   <div class="txt">
-    <div class="mono eyebrow">01 · HackRU Fall 2026 · AI · October 2026</div>
+    <div class="mono eyebrow">01 · AI + Hardware · February to March 2026</div>
+    <h2>AI-Powered Computer Vision Turret</h2>
+    <div class="what"><span class="mono lbl">What it is</span><p>A real-time turret with three modes: manual control, hand tracking that fires when you make a fist, and face tracking that recognizes specific people.</p></div>
+    <div class="how"><span class="mono lbl">How it works</span><p class="lede">Built in Python with OpenCV and MediaPipe hand tracking. A closed fist triggers firing and pyUSB drives the hardware. A TensorFlow face recognition model, trained on a custom image dataset, identifies and tracks individuals in live video.</p></div>
+    <span class="mono lbl" style="margin-bottom:-8px">By the numbers</span>
+    <ul class="facts">
+      <li><b>21</b><span>hand landmarks tracked per frame</span></li>
+      <li><b>3</b><span>modes: manual, hand, face</span></li>
+      <li><b>20</b><span>days, the longest build</span></li>
+    </ul>
+    <div class="bug"><span class="mono lbl">What I learned</span><p>Smooth aim took constant testing and parameter tuning. The models are only half the job; the other half is making the hardware keep up with what the camera sees.</p></div>
+    <div class="tags"><span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>TensorFlow</span><span>pyUSB</span></div>
+    <div class="with">With Dylan Fratella</div>
+    <div class="links"><a class="btn" href="https://docs.google.com/document/d/1_K57aHIAasnKWg2AtLk4ACDyNQE92_SFCTe7U5UE9YQ/edit?tab=t.0" target="_blank" rel="noopener">Log, write-up &amp; deck ↗</a></div>
+  </div>
+  <figure class="sim"><canvas id="sim-turret" aria-label="Turret simulation tracking a hand or face target and firing on a fist"></canvas>
+    <figcaption><span class="modes" id="tmodes"><button type="button" data-m="0">Manual</button><button type="button" data-m="1">Hand</button><button type="button" data-m="2">Face</button></span><span class="mono">Move to aim · hold to fire</span></figcaption></figure>
+</div></section>
+
+<!-- 02 REDLINE -->
+<section class="ch g flip" id="redline"><div class="wrap">
+  <div class="ch-num" aria-hidden="true">02</div>
+  <div class="txt">
+    <div class="mono eyebrow">02 · HackRU Fall 2026 · AI · October 2026</div>
     <h2>Redline</h2>
     <div class="what"><span class="mono lbl">What it is</span><p>An AI-powered iPad note-taking app that checks handwritten math step by step and shows you exactly where you went wrong.</p></div>
     <div class="how"><span class="mono lbl">How it works</span><p class="lede">Students work problems by hand on an iPad. Gemini reads each line and flags the step with the error, ElevenLabs talks the student through the fix out loud, and Redline turns every mistake into personalized practice problems and learning insights.</p></div>
@@ -265,11 +288,11 @@ html.still{scroll-behavior:auto}
     <figcaption><span class="mono live">Live demo</span><span class="mono">Click to replay</span></figcaption></figure>
 </div></section>
 
-<!-- 02 PAIRS -->
-<section class="ch g flip" id="pairs"><div class="wrap">
-  <div class="ch-num" aria-hidden="true">02</div>
+<!-- 03 PAIRS -->
+<section class="ch" id="pairs"><div class="wrap">
+  <div class="ch-num" aria-hidden="true">03</div>
   <div class="txt">
-    <div class="mono eyebrow">02 · Quant · October 2025</div>
+    <div class="mono eyebrow">03 · Quant · October 2025</div>
     <h2>Pair Trading Algorithm</h2>
     <div class="what"><span class="mono lbl">What it is</span><p>A Python analysis tool that finds two stocks that move together and flags when their prices drift far enough apart to trade.</p></div>
     <div class="how"><span class="mono lbl">How it works</span><p class="lede">It pulls five years of historical market data for any two tickers, checks their correlation, and fits a regression of one on the other. The spread becomes a z-score, and mean-reversion signals mark entry and exit points across strong buy, buy, hold, sell, and strong sell zones.</p></div>
@@ -288,11 +311,11 @@ html.still{scroll-behavior:auto}
     <figcaption><span class="mono live">Live model</span><span class="mono">Simulated prices · real method</span></figcaption></figure>
 </div></section>
 
-<!-- 03 BTC -->
-<section class="ch" id="btc"><div class="wrap">
-  <div class="ch-num" aria-hidden="true">03</div>
+<!-- 04 BTC -->
+<section class="ch g flip" id="btc"><div class="wrap">
+  <div class="ch-num" aria-hidden="true">04</div>
   <div class="txt">
-    <div class="mono eyebrow">03 · Quant · February 2026</div>
+    <div class="mono eyebrow">04 · Quant · February 2026</div>
     <h2>Bitcoin Trading Bot</h2>
     <div class="what"><span class="mono lbl">What it is</span><p>An automated Bitcoin trading bot, written in Pine Script, that logs every trade to a live Google Sheets dashboard.</p></div>
     <div class="how"><span class="mono lbl">How it works</span><p class="lede">The strategy uses technical indicators to trade volatility breakouts, with ATR-based stops and targets. Trade signals fire a webhook into Google Sheets, which logs each execution, calculates profit and loss metrics like Sharpe ratio and expectancy, and monitors performance in real time.</p></div>
@@ -313,11 +336,11 @@ html.still{scroll-behavior:auto}
     <figcaption><span class="mono live">Live paper bot</span><span class="mono">Simulated feed · same logic</span></figcaption></figure>
 </div></section>
 
-<!-- 04 RL -->
-<section class="ch g flip" id="rl"><div class="wrap">
-  <div class="ch-num" aria-hidden="true">04</div>
+<!-- 05 RL -->
+<section class="ch" id="rl"><div class="wrap">
+  <div class="ch-num" aria-hidden="true">05</div>
   <div class="txt">
-    <div class="mono eyebrow">04 · AI · November to December 2025</div>
+    <div class="mono eyebrow">05 · AI · November to December 2025</div>
     <h2>Reinforcement Learning Racing Agent</h2>
     <div class="what"><span class="mono lbl">What it is</span><p>An AI that teaches itself to drive a racing track from scratch, using nothing but rewards and trial and error.</p></div>
     <div class="how"><span class="mono lbl">How it works</span><p class="lede">A Deep Q-Learning agent built in TensorFlow and Keras drives a Pygame racing track. NumPy arrays hold its state, epsilon-greedy exploration starts it random and makes it smarter each generation, and checkpoint-based rewards push it forward.</p></div>
@@ -337,29 +360,6 @@ html.still{scroll-behavior:auto}
   </div>
   <figure class="sim"><canvas id="sim-track" aria-label="Agents learning to drive an oval track over generations"></canvas>
     <figcaption><span class="mono live">Live training</span><span class="mono">Compressed demo · click to restart at gen 1</span></figcaption></figure>
-</div></section>
-
-<!-- 05 TURRET -->
-<section class="ch" id="turret"><div class="wrap">
-  <div class="ch-num" aria-hidden="true">05</div>
-  <div class="txt">
-    <div class="mono eyebrow">05 · AI + Hardware · February to March 2026</div>
-    <h2>AI-Powered Computer Vision Turret</h2>
-    <div class="what"><span class="mono lbl">What it is</span><p>A real-time turret with three modes: manual control, hand tracking that fires when you make a fist, and face tracking that recognizes specific people.</p></div>
-    <div class="how"><span class="mono lbl">How it works</span><p class="lede">Built in Python with OpenCV and MediaPipe hand tracking. A closed fist triggers firing and pyUSB drives the hardware. A TensorFlow face recognition model, trained on a custom image dataset, identifies and tracks individuals in live video.</p></div>
-    <span class="mono lbl" style="margin-bottom:-8px">By the numbers</span>
-    <ul class="facts">
-      <li><b>21</b><span>hand landmarks tracked per frame</span></li>
-      <li><b>3</b><span>modes: manual, hand, face</span></li>
-      <li><b>20</b><span>days, the longest build</span></li>
-    </ul>
-    <div class="bug"><span class="mono lbl">What I learned</span><p>Smooth aim took constant testing and parameter tuning. The models are only half the job; the other half is making the hardware keep up with what the camera sees.</p></div>
-    <div class="tags"><span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>TensorFlow</span><span>pyUSB</span></div>
-    <div class="with">With Dylan Fratella</div>
-    <div class="links"><a class="btn" href="https://docs.google.com/document/d/1_K57aHIAasnKWg2AtLk4ACDyNQE92_SFCTe7U5UE9YQ/edit?tab=t.0" target="_blank" rel="noopener">Log, write-up &amp; deck ↗</a></div>
-  </div>
-  <figure class="sim"><canvas id="sim-turret" aria-label="Turret simulation tracking a hand or face target and firing on a fist"></canvas>
-    <figcaption><span class="modes" id="tmodes"><button type="button" data-m="0">Manual</button><button type="button" data-m="1">Hand</button><button type="button" data-m="2">Face</button></span><span class="mono">Move to aim · hold to fire</span></figcaption></figure>
 </div></section>
 
 <!-- 06 SCREENER -->

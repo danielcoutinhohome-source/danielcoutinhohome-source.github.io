@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Caveat:wght@600&display=swap">
 <style>
-/* Layout: cream page, forest-green instrument panels. Particle-name hero, six project chapters with live sims, wins, about */
+/* Layout: cream page, forest-green instrument panels. Particle-name hero, seven project chapters with live sims, wins, about */
 :root{
   color-scheme:light;
   --cream:#f4efe2; --white:#fffdf8; --ink:#0e2a22; --muted:#56695f; --line:#ddd4bd;
@@ -212,8 +212,8 @@ html.still{scroll-behavior:auto}
 <nav><div class="wrap">
   <a class="logo" href="#top">Daniel Coutinho<i>.</i></a>
   <ul class="idx" id="idx">
-    <li><a href="#turret">01</a></li><li><a href="#redline">02</a></li><li><a href="#pairs">03</a></li><li><a href="#btc">04</a></li>
-    <li><a href="#rl">05</a></li><li><a href="#screener">06</a></li><li><a href="#wins">Wins</a></li><li><a href="#about">About</a></li>
+    <li><a href="#codewarrior">01</a></li><li><a href="#turret">02</a></li><li><a href="#redline">03</a></li><li><a href="#pairs">04</a></li>
+    <li><a href="#btc">05</a></li><li><a href="#rl">06</a></li><li><a href="#screener">07</a></li><li><a href="#wins">Wins</a></li><li><a href="#about">About</a></li>
   </ul>
 </div></nav>
 
@@ -223,31 +223,53 @@ html.still{scroll-behavior:auto}
     <h1 class="sr">Daniel Coutinho</h1>
     <canvas id="hero-cv" class="hero-cv" aria-hidden="true"></canvas>
     <div class="hero-row">
-      <p class="pitch">I build <span class="slot"><span class="slot-in" id="slot"><span>AI tutors.</span><span>trading bots.</span><span>neural nets.</span><span>stock screeners.</span><span>vision turrets.</span><span>pair trades.</span></span></span></p>
+      <p class="pitch">I build <span class="slot"><span class="slot-in" id="slot"><span>coding games.</span><span>AI tutors.</span><span>trading bots.</span><span>neural nets.</span><span>stock screeners.</span><span>vision turrets.</span><span>pair trades.</span></span></span></p>
       <div>
-        <p class="sub">Finance, statistics, and math at Rutgers with a CS minor, headed for quantitative finance. Here are six builds, and each one is running live on this page.</p>
+        <p class="sub">Finance, statistics, and math at Rutgers with a CS minor, headed for quantitative finance. Here are seven builds, and each one is running live on this page.</p>
         <p class="mono" style="margin:12px 0 0">↳ drag through my name · click it to detonate</p>
       </div>
     </div>
     <div class="jump">
-      <a class="chip hot" href="#redline"><b>NEW</b>Redline · HackRU</a>
-      <a class="chip" href="#pairs"><b>03</b>Pair trading</a>
-      <a class="chip" href="#btc"><b>04</b>Bitcoin bot</a>
-      <a class="chip" href="#rl"><b>05</b>RL racing agent</a>
+      <a class="chip hot" href="#codewarrior"><b>NEW</b>CodeWarrior</a>
+      <a class="chip" href="#redline"><b>03</b>Redline · HackRU</a>
+      <a class="chip" href="#pairs"><b>04</b>Pair trading</a>
+      <a class="chip" href="#btc"><b>05</b>Bitcoin bot</a>
     </div>
   </div>
   <div class="tape" aria-hidden="true"><div class="tape-in">
-    <span>REDLINE <b class="rd">● SHIPPED IN 24H</b></span><span>PAIRS <b class="up">|ρ| ≥ 0.80</b></span><span>BTC.BOT <b class="up">WEBHOOK → SHEETS</b></span><span>DQN <b class="am">GEN 1,000+</b></span><span>GARDEN STATE CTF <b class="am">5TH / 500+ TEAMS</b></span><span>PURPLE COMET <b class="up">TOP 20 NJ</b></span><span>SCREENER <b class="up">20+ FILTERS</b></span><span>TURRET <b class="rd">FIST → FIRE</b></span>
-    <span>REDLINE <b class="rd">● SHIPPED IN 24H</b></span><span>PAIRS <b class="up">|ρ| ≥ 0.80</b></span><span>BTC.BOT <b class="up">WEBHOOK → SHEETS</b></span><span>DQN <b class="am">GEN 1,000+</b></span><span>GARDEN STATE CTF <b class="am">5TH / 500+ TEAMS</b></span><span>PURPLE COMET <b class="up">TOP 20 NJ</b></span><span>SCREENER <b class="up">20+ FILTERS</b></span><span>TURRET <b class="rd">FIST → FIRE</b></span>
+    <span>CODEWARRIOR <b class="am">7 WORLDS</b></span><span>REDLINE <b class="rd">● SHIPPED IN 24H</b></span><span>PAIRS <b class="up">|ρ| ≥ 0.80</b></span><span>BTC.BOT <b class="up">WEBHOOK → SHEETS</b></span><span>DQN <b class="am">GEN 1,000+</b></span><span>GARDEN STATE CTF <b class="am">5TH / 500+ TEAMS</b></span><span>PURPLE COMET <b class="up">TOP 20 NJ</b></span><span>SCREENER <b class="up">20+ FILTERS</b></span><span>TURRET <b class="rd">FIST → FIRE</b></span>
+    <span>CODEWARRIOR <b class="am">7 WORLDS</b></span><span>REDLINE <b class="rd">● SHIPPED IN 24H</b></span><span>PAIRS <b class="up">|ρ| ≥ 0.80</b></span><span>BTC.BOT <b class="up">WEBHOOK → SHEETS</b></span><span>DQN <b class="am">GEN 1,000+</b></span><span>GARDEN STATE CTF <b class="am">5TH / 500+ TEAMS</b></span><span>PURPLE COMET <b class="up">TOP 20 NJ</b></span><span>SCREENER <b class="up">20+ FILTERS</b></span><span>TURRET <b class="rd">FIST → FIRE</b></span>
   </div></div>
 </header>
 
 <main>
-<!-- 01 TURRET -->
-<section class="ch" id="turret"><div class="wrap">
+<!-- 01 CODEWARRIOR -->
+<section class="ch" id="codewarrior"><div class="wrap">
   <div class="ch-num" aria-hidden="true">01</div>
   <div class="txt">
-    <div class="mono eyebrow">01 · AI + Hardware · February to March 2026</div>
+    <div class="mono eyebrow">01 · EdTech startup · In development · Fall 2026</div>
+    <h2>CodeWarrior</h2>
+    <div class="what"><span class="mono lbl">What it is</span><p>A game that teaches kids to code: you forge a warrior, travel a world map, and beat monsters by writing the missing piece of real code.</p></div>
+    <div class="how"><span class="mono lbl">How it works</span><p class="lede">Each world covers one concept, from syntax and if statements to loops, strings, arrays, and classes. Battles are fill-in-the-blank code questions, and every correct answer lands a hit. Boss fights test the whole world, like popping a recursive call stack. Students sign up with just a name and password, and teachers link a class with a code.</p></div>
+    <span class="mono lbl" style="margin-bottom:-8px">By the numbers</span>
+    <ul class="facts">
+      <li><b>7</b><span>worlds, Syntax Shore to LeetCode Citadel</span></li>
+      <li><b>5</b><span>code questions per battle</span></li>
+      <li><b>0</b><span>emails needed to sign up</span></li>
+    </ul>
+    <div class="bug"><span class="mono lbl">The idea</span><p>Coding feels like homework until it feels like a game. Every hit in CodeWarrior is a line of code the student actually got right.</p></div>
+    <div class="tags"><span>Game design</span><span>EdTech</span><span>Product design</span><span>Startup</span></div>
+    <div class="with">Team project · inspired by Tech Start at Rutgers</div>
+  </div>
+  <figure class="sim"><canvas id="sim-cw" aria-label="CodeWarrior battle: pick the missing code to strike the monster"></canvas>
+    <figcaption><span class="mono live">Playable</span><span class="mono">Tap the right code to strike</span></figcaption></figure>
+</div></section>
+
+<!-- 02 TURRET -->
+<section class="ch g flip" id="turret"><div class="wrap">
+  <div class="ch-num" aria-hidden="true">02</div>
+  <div class="txt">
+    <div class="mono eyebrow">02 · AI + Hardware · February to March 2026</div>
     <h2>AI-Powered Computer Vision Turret</h2>
     <div class="what"><span class="mono lbl">What it is</span><p>A real-time turret with three modes: manual control, hand tracking that fires when you make a fist, and face tracking that recognizes specific people.</p></div>
     <div class="how"><span class="mono lbl">How it works</span><p class="lede">Built in Python with OpenCV and MediaPipe hand tracking. A closed fist triggers firing and pyUSB drives the hardware. A TensorFlow face recognition model, trained on a custom image dataset, identifies and tracks individuals in live video.</p></div>
@@ -266,11 +288,11 @@ html.still{scroll-behavior:auto}
     <figcaption><span class="modes" id="tmodes"><button type="button" data-m="0">Manual</button><button type="button" data-m="1">Hand</button><button type="button" data-m="2">Face</button></span><span class="mono">Move to aim · hold to fire</span></figcaption></figure>
 </div></section>
 
-<!-- 02 REDLINE -->
-<section class="ch g flip" id="redline"><div class="wrap">
-  <div class="ch-num" aria-hidden="true">02</div>
+<!-- 03 REDLINE -->
+<section class="ch" id="redline"><div class="wrap">
+  <div class="ch-num" aria-hidden="true">03</div>
   <div class="txt">
-    <div class="mono eyebrow">02 · HackRU Fall 2026 · AI · October 2026</div>
+    <div class="mono eyebrow">03 · HackRU Fall 2026 · AI · October 2026</div>
     <h2>Redline</h2>
     <div class="what"><span class="mono lbl">What it is</span><p>An AI-powered iPad note-taking app that checks handwritten math step by step and shows you exactly where you went wrong.</p></div>
     <div class="how"><span class="mono lbl">How it works</span><p class="lede">Students work problems by hand on an iPad. Gemini reads each line and flags the step with the error, ElevenLabs talks the student through the fix out loud, and Redline turns every mistake into personalized practice problems and learning insights.</p></div>
@@ -288,11 +310,11 @@ html.still{scroll-behavior:auto}
     <figcaption><span class="mono live">Live demo</span><span class="mono">Click to replay</span></figcaption></figure>
 </div></section>
 
-<!-- 03 PAIRS -->
-<section class="ch" id="pairs"><div class="wrap">
-  <div class="ch-num" aria-hidden="true">03</div>
+<!-- 04 PAIRS -->
+<section class="ch g flip" id="pairs"><div class="wrap">
+  <div class="ch-num" aria-hidden="true">04</div>
   <div class="txt">
-    <div class="mono eyebrow">03 · Quant · October 2025</div>
+    <div class="mono eyebrow">04 · Quant · October 2025</div>
     <h2>Pair Trading Algorithm</h2>
     <div class="what"><span class="mono lbl">What it is</span><p>A Python analysis tool that finds two stocks that move together and flags when their prices drift far enough apart to trade.</p></div>
     <div class="how"><span class="mono lbl">How it works</span><p class="lede">It pulls five years of historical market data for any two tickers, checks their correlation, and fits a regression of one on the other. The spread becomes a z-score, and mean-reversion signals mark entry and exit points across strong buy, buy, hold, sell, and strong sell zones.</p></div>
@@ -311,11 +333,11 @@ html.still{scroll-behavior:auto}
     <figcaption><span class="mono live">Live model</span><span class="mono">Simulated prices · real method</span></figcaption></figure>
 </div></section>
 
-<!-- 04 BTC -->
-<section class="ch g flip" id="btc"><div class="wrap">
-  <div class="ch-num" aria-hidden="true">04</div>
+<!-- 05 BTC -->
+<section class="ch" id="btc"><div class="wrap">
+  <div class="ch-num" aria-hidden="true">05</div>
   <div class="txt">
-    <div class="mono eyebrow">04 · Quant · February 2026</div>
+    <div class="mono eyebrow">05 · Quant · February 2026</div>
     <h2>Bitcoin Trading Bot</h2>
     <div class="what"><span class="mono lbl">What it is</span><p>An automated Bitcoin trading bot, written in Pine Script, that logs every trade to a live Google Sheets dashboard.</p></div>
     <div class="how"><span class="mono lbl">How it works</span><p class="lede">The strategy uses technical indicators to trade volatility breakouts, with ATR-based stops and targets. Trade signals fire a webhook into Google Sheets, which logs each execution, calculates profit and loss metrics like Sharpe ratio and expectancy, and monitors performance in real time.</p></div>
@@ -336,11 +358,11 @@ html.still{scroll-behavior:auto}
     <figcaption><span class="mono live">Live paper bot</span><span class="mono">Simulated feed · same logic</span></figcaption></figure>
 </div></section>
 
-<!-- 05 RL -->
-<section class="ch" id="rl"><div class="wrap">
-  <div class="ch-num" aria-hidden="true">05</div>
+<!-- 06 RL -->
+<section class="ch g flip" id="rl"><div class="wrap">
+  <div class="ch-num" aria-hidden="true">06</div>
   <div class="txt">
-    <div class="mono eyebrow">05 · AI · November to December 2025</div>
+    <div class="mono eyebrow">06 · AI · November to December 2025</div>
     <h2>Reinforcement Learning Racing Agent</h2>
     <div class="what"><span class="mono lbl">What it is</span><p>An AI that teaches itself to drive a racing track from scratch, using nothing but rewards and trial and error.</p></div>
     <div class="how"><span class="mono lbl">How it works</span><p class="lede">A Deep Q-Learning agent built in TensorFlow and Keras drives a Pygame racing track. NumPy arrays hold its state, epsilon-greedy exploration starts it random and makes it smarter each generation, and checkpoint-based rewards push it forward.</p></div>
@@ -362,11 +384,11 @@ html.still{scroll-behavior:auto}
     <figcaption><span class="mono live">Live training</span><span class="mono">Compressed demo · click to restart at gen 1</span></figcaption></figure>
 </div></section>
 
-<!-- 06 SCREENER -->
-<section class="ch g flip" id="screener"><div class="wrap">
-  <div class="ch-num" aria-hidden="true">06</div>
+<!-- 07 SCREENER -->
+<section class="ch" id="screener"><div class="wrap">
+  <div class="ch-num" aria-hidden="true">07</div>
   <div class="txt">
-    <div class="mono eyebrow">06 · Quant · September 2025</div>
+    <div class="mono eyebrow">07 · Quant · September 2025</div>
     <h2>Stock Screening System</h2>
     <div class="what"><span class="mono lbl">What it is</span><p>A Python platform that screens hundreds of public companies and ranks them, built to pick stocks for the Wharton investment competition.</p></div>
     <div class="how"><span class="mono lbl">How it works</span><p class="lede">It pulls fundamentals through financial APIs and runs every company through 20+ filters across valuation, profitability, growth, and leverage, then scores and ranks them to automate equity research.</p></div>
@@ -741,7 +763,86 @@ function turret(o){
   return{step,draw};
 }
 
+/* ---------- 01 CODEWARRIOR battle ---------- */
+function codewarrior(o){
+  const Q=[
+    {pre:'sum ',post:' i;',ans:'+=',opts:['=','+=','-='],mon:'Off-By-One Goblin',ctx:'for (int i = 1; i <= n; i++)'},
+    {pre:'for (int i = 0; i ',post:' n; i++)',ans:'<',opts:['<','<=','>'],mon:'Fencepost Imp',ctx:'// visit all n items once'},
+    {pre:'return n * fact(n ',post:' 1);',ans:'-',opts:['+','-','*'],mon:'The Stack Overflow',ctx:'if (n <= 1) return 1;'},
+    {pre:'if (x ',post:' 0) return "even";',ans:'% 2 ==',opts:['/ 2 ==','% 2 ==','* 2 =='],mon:'Branch Troll',ctx:'String parity(int x)'}];
+  let qi=0,t=0,ph=0,pick=-1,hover=0,mhp=100,php=100,combo=0,dmg=null,shake=0,miss=false,user=false,tiles=[],idle=0;
+  const rr=(x,a,b,w,h,r)=>{x.beginPath();x.moveTo(a+r,b);x.arcTo(a+w,b,a+w,b+h,r);x.arcTo(a+w,b+h,a,b+h,r);x.arcTo(a,b+h,a,b,r);x.arcTo(a,b,a+w,b,r);x.closePath()};
+  function answer(i){if(ph!==0)return;pick=i;const q=Q[qi];miss=q.opts[i]!==q.ans;ph=1;t=0;
+    if(miss){combo=0;php=Math.max(10,php-20);dmg={v:'MISS',l:1,side:0}}else{combo++;mhp=Math.max(0,mhp-34);dmg={v:'-34',l:1,side:1};shake=12}}
+  o.onclick=()=>{for(let i=0;i<tiles.length;i++){const b=tiles[i];if(o.mx>=b[0]&&o.mx<=b[0]+b[2]&&o.my>=b[1]&&o.my<=b[1]+b[3]){user=true;idle=0;answer(i);return}}};
+  function next(){ph=0;t=0;pick=-1;qi=(qi+1)%Q.length;if(mhp<=0){mhp=100;php=100}}
+  function step(){t++;idle++;if(shake>0)shake--;if(dmg){dmg.l-=.012;if(dmg.l<=0)dmg=null}
+    if(ph===0){const q=Q[qi],ci=q.opts.indexOf(q.ans);
+      if(o.inside){user=true}
+      if(!o.inside&&idle>90){user=false}
+      if(!user){hover=Math.floor(t/28)%3;if(t>100){const wrong=(qi===1&&combo===0&&mhp===100);answer(wrong?(ci+1)%3:ci)}}}
+    else if(ph===1&&t>110){if(mhp<=0){ph=2;t=0}else next()}
+    else if(ph===2&&t>120)next();}
+  function knight(x,cx,by,s,bob){x.save();x.translate(cx,by+bob);x.scale(s,s);
+    x.fillStyle='rgba(0,0,0,.25)';x.beginPath();x.ellipse(0,4,38,8,0,0,7);x.fill();
+    x.fillStyle='#2d9cdb';rr(x,-24,-62,48,58,16);x.fill();
+    x.fillStyle='#e2b84a';x.fillRect(-24,-30,48,7);
+    x.fillStyle='#f3d9b8';x.beginPath();x.arc(0,-82,20,0,7);x.fill();
+    x.fillStyle='#2d9cdb';x.beginPath();x.arc(0,-88,22,Math.PI,0);x.fill();x.fillRect(-22,-90,44,8);
+    x.fillStyle='#ff5a5f';x.beginPath();x.moveTo(-4,-110);x.quadraticCurveTo(14,-128,26,-106);x.quadraticCurveTo(10,-112,4,-104);x.fill();
+    x.fillStyle=C.deep;x.fillRect(-9,-84,4,5);x.fillRect(5,-84,4,5);
+    x.fillStyle='#ff8a00';x.beginPath();x.moveTo(-40,-56);x.lineTo(-16,-50);x.lineTo(-16,-24);x.quadraticCurveTo(-28,-12,-40,-22);x.closePath();x.fill();
+    x.fillStyle='#fff';x.font=`800 11px ${MONO}`;x.fillText('</>',-38,-34);
+    x.save();x.translate(26,-44);x.rotate(ph===1&&!miss&&t<30?-1.4+t/20:-.5);x.fillStyle='#dbe4ef';x.fillRect(-3,-52,6,52);x.fillStyle='#e2b84a';x.fillRect(-10,-4,20,6);x.restore();
+    x.restore()}
+  function goblin(x,cx,by,s,br,hit){x.save();x.translate(cx+(hit?Math.sin(shake*2)*5:0),by);x.scale(s*(1+br*.03),s*(1-br*.03));
+    x.fillStyle='rgba(0,0,0,.25)';x.beginPath();x.ellipse(0,4,46,8,0,0,7);x.fill();
+    x.fillStyle='#3fa956';x.beginPath();x.moveTo(-40,-60);x.lineTo(-70,-92);x.lineTo(-30,-70);x.fill();x.beginPath();x.moveTo(40,-60);x.lineTo(70,-92);x.lineTo(30,-70);x.fill();
+    x.fillStyle=hit?'#ff8a7a':'#4cc764';x.beginPath();x.ellipse(0,-46,52,50,0,0,7);x.fill();
+    x.fillStyle='rgba(255,255,255,.25)';x.beginPath();x.ellipse(-20,-74,12,6,-.5,0,7);x.fill();
+    x.fillStyle='#fff';x.beginPath();x.arc(0,-60,22,0,7);x.fill();x.strokeStyle='#1f6b33';x.lineWidth=3;x.stroke();
+    x.fillStyle=C.deep;x.beginPath();x.arc(5+Math.sin(t/30)*3,-57,9,0,7);x.fill();
+    x.strokeStyle='#1f4a28';x.lineWidth=6;x.lineCap='round';x.beginPath();x.moveTo(-26,-84);x.lineTo(-6,-78);x.moveTo(26,-84);x.lineTo(6,-78);x.stroke();
+    x.fillStyle='#2a1b33';x.beginPath();x.moveTo(-20,-26);x.quadraticCurveTo(0,-12,20,-26);x.fill();
+    x.restore()}
+  function bar(x,a,b,w,lab,v,col){x.fillStyle='#fffdf8';rr(x,a,b,w,34,10);x.fill();x.fillStyle=C.deep;x.font=`700 11px Geist, sans-serif`;x.fillText(lab,a+10,b+14);x.textAlign='right';x.fillText(Math.round(v)+'/100',a+w-10,b+14);x.textAlign='left';
+    x.fillStyle='#e3e8df';rr(x,a+10,b+19,w-20,8,4);x.fill();x.fillStyle=col;rr(x,a+10,b+19,Math.max(8,(w-20)*v/100),8,4);x.fill()}
+  function draw(){
+    const x=o.ctx,W=o.W,H=o.H,q=Q[qi];
+    const sky=x.createLinearGradient(0,0,0,H*.6);sky.addColorStop(0,'#bfe6ff');sky.addColorStop(1,'#e6f6ff');x.fillStyle=sky;x.fillRect(0,0,W,H);
+    const gy=H*.53;x.fillStyle='#9bd7a3';x.beginPath();x.ellipse(W*.25,gy+10,W*.45,60,0,Math.PI,0);x.fill();x.fillStyle='#8acb93';x.beginPath();x.ellipse(W*.8,gy+14,W*.4,70,0,Math.PI,0);x.fill();
+    x.fillStyle='#8fdd6a';x.fillRect(0,gy,W,H-gy);x.fillStyle='#7ac955';x.fillRect(0,gy,W,5);
+    for(let i=0;i<3;i++){const cx=((t*.3+i*W/2.2)%(W+160))-80;x.fillStyle='rgba(255,255,255,.9)';x.beginPath();x.ellipse(cx,30+i*18,40,12,0,0,7);x.ellipse(cx+26,24+i*18,26,12,0,0,7);x.fill()}
+    const s=Math.min(1,Math.max(.62,W/560)),k=Math.min(1,H/370);
+    bar(x,12,10,Math.min(170,W*.36),'ByteKnight',php,'#3ec46d');
+    bar(x,W-Math.min(190,W*.4)-12,10,Math.min(190,W*.4),q.mon,mhp,'#ff5a5f');
+    if(combo>1){x.save();x.translate(W/2,30);x.rotate(-.06);x.fillStyle='#8b5cf6';rr(x,-46,-14,92,28,10);x.fill();x.fillStyle='#fff';x.font=`800 14px "Bricolage Grotesque", sans-serif`;x.textAlign='center';x.fillText(combo+'x COMBO',0,5);x.restore();x.textAlign='left'}
+    const by=gy+22*k;
+    knight(x,W*.22,by,s*k,Math.sin(t/16)*4);
+    if(!(ph===2&&t>40))goblin(x,W*.76,by,s*k,Math.sin(t/12),shake>0);
+    if(ph===2){const p=Math.min(1,t/40);x.fillStyle=`rgba(226,184,74,${1-p})`;for(let i=0;i<14;i++){const a=i/14*6.28;x.beginPath();x.arc(W*.76+Math.cos(a)*p*80,by-46+Math.sin(a)*p*80,5,0,7);x.fill()}
+      if(t>30){x.fillStyle=C.deep;x.font=`800 ${Math.round(22*k)}px "Bricolage Grotesque", sans-serif`;x.textAlign='center';x.fillText('VICTORY · +50 XP',W*.62,by-60);x.textAlign='left'}}
+    if(ph===1&&!miss&&t<40){x.strokeStyle=`rgba(255,255,255,${1-t/40})`;x.lineWidth=8;x.lineCap='round';x.beginPath();x.moveTo(W*.68,by-110*k);x.quadraticCurveTo(W*.78,by-60*k,W*.86,by-10);x.stroke()}
+    if(dmg){x.save();x.globalAlpha=Math.min(1,dmg.l*2);x.font=`800 ${Math.round(30*k)}px "Bricolage Grotesque", sans-serif`;x.textAlign='center';x.lineWidth=5;x.strokeStyle='#fff';const dx=dmg.side?W*.76:W*.22,dy=by-118*k-(1-dmg.l)*24;x.strokeText(dmg.v,dx,dy);x.fillStyle=dmg.side?'#d9503f':'#8a6610';x.fillText(dmg.v,dx,dy);x.restore()}
+    // code panel
+    const py=gy+34*k+8,ph2=H-py-10;x.fillStyle='#1e2248';rr(x,10,py,W-20,ph2,14);x.fill();
+    x.font=`500 ${Math.round(12*Math.min(1,W/520))}px ${MONO}`;x.fillStyle='#8f96c9';x.fillText(q.ctx,24,py+22);
+    const fs=Math.round(14*Math.min(1,W/480));x.font=`600 ${fs}px ${MONO}`;let cx=24;const ly=py+46;
+    x.fillStyle='#e8ecff';x.fillText(q.pre,cx,ly);cx+=x.measureText(q.pre).width;
+    const fill=ph>0?q.opts[pick]:'___',fw=Math.max(x.measureText(fill).width+14,40);x.strokeStyle=ph>0?(miss?'#ff8a7a':'#7fdca4'):'#e2b84a';x.lineWidth=2;rr(x,cx,ly-fs-2,fw,fs+10,6);x.stroke();
+    x.fillStyle=ph>0?(miss?'#ff8a7a':'#7fdca4'):'#e2b84a';x.fillText(fill,cx+7,ly);cx+=fw+4;x.fillStyle='#e8ecff';x.fillText(q.post,cx,ly);
+    const n=q.opts.length,gap=8,tw=Math.min(110,(W-48-gap*(n-1))/n),th=Math.min(34,ph2-62),ty=py+ph2-th-10;tiles=[];
+    for(let i=0;i<n;i++){const tx=24+i*(tw+gap);tiles.push([tx,ty,tw,th]);
+      const isH=ph===0&&(user?(o.mx>=tx&&o.mx<=tx+tw&&o.my>=ty&&o.my<=ty+th):hover===i),isP=ph>0&&pick===i,ok=q.opts[i]===q.ans;
+      x.fillStyle=isP?(miss?'#ff6b5b':'#3ec46d'):(ph>0&&ok&&miss)?'#2f6e52':isH?'#e2b84a':'#2b3060';rr(x,tx,ty+(isH?-2:0),tw,th,9);x.fill();
+      x.fillStyle=isH||isP?C.deep:'#e8ecff';x.font=`700 ${Math.round(13*Math.min(1,W/480))}px ${MONO}`;x.textAlign='center';x.fillText(q.opts[i],tx+tw/2,ty+th/2+5+(isH?-2:0));x.textAlign='left'}
+    if(!user&&ph===0){const b=tiles[hover];x.fillStyle='#fff';x.beginPath();const hx=b[0]+b[2]*.7,hy=b[1]+b[3]*.75;x.moveTo(hx,hy);x.lineTo(hx+12,hy+12);x.lineTo(hx+5,hy+12);x.lineTo(hx+2,hy+18);x.closePath();x.fill()}
+  }
+  return{step,draw};
+}
+
 reg('hero-cv',hero);
+reg('sim-cw',codewarrior);
 reg('sim-redline',redline,560);
 reg('sim-pair',pair);
 reg('sim-btc',btc,1800);

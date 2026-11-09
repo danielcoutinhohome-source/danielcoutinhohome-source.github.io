@@ -165,7 +165,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 #bg-cv{z-index:0}#fx-cv{z-index:99}
 .motion{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:80;font:500 .72rem var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--cream);background:var(--forest);border:0;border-radius:999px;padding:10px 15px;cursor:pointer;box-shadow:0 10px 30px -12px rgba(14,42,34,.6)}
 .chip{animation:bob 3.4s ease-in-out infinite}
-.chip:nth-child(2){animation-delay:-.8s}.chip:nth-child(3){animation-delay:-1.6s}.chip:nth-child(4){animation-delay:-2.4s}
+.chip:nth-child(2){animation-delay:-.8s}.chip:nth-child(3){animation-delay:-1.6s}.chip:nth-child(4){animation-delay:-2.4s}.chip:nth-child(5){animation-delay:-3.2s}
+.chip.hot{box-shadow:0 0 0 0 rgba(217,80,63,.6);animation:bob 3.4s ease-in-out infinite,ping 1.8s ease-out infinite}
+@keyframes ping{70%{box-shadow:0 0 0 14px rgba(217,80,63,0)}100%{box-shadow:0 0 0 0 rgba(217,80,63,0)}}
+footer .wrap{padding-bottom:120px}
 @keyframes bob{50%{translate:0 -5px}}
 .ch::before{content:"";position:absolute;top:-1px;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--ac),transparent);transform:scaleX(0);z-index:3}
 .ch.seen::before{animation:sweep 1.4s cubic-bezier(.2,.9,.2,1) forwards}
@@ -212,7 +215,7 @@ html.still{scroll-behavior:auto}
 <nav><div class="wrap">
   <a class="logo" href="#top">Daniel Coutinho<i>.</i></a>
   <ul class="idx" id="idx">
-    <li><a href="#codewarrior">01</a></li><li><a href="#turret">02</a></li><li><a href="#redline">03</a></li><li><a href="#pairs">04</a></li>
+    <li><a href="#turret">01</a></li><li><a href="#codewarrior">02</a></li><li><a href="#redline">03</a></li><li><a href="#pairs">04</a></li>
     <li><a href="#btc">05</a></li><li><a href="#rl">06</a></li><li><a href="#screener">07</a></li><li><a href="#wins">Wins</a></li><li><a href="#about">About</a></li>
   </ul>
 </div></nav>
@@ -223,53 +226,32 @@ html.still{scroll-behavior:auto}
     <h1 class="sr">Daniel Coutinho</h1>
     <canvas id="hero-cv" class="hero-cv" aria-hidden="true"></canvas>
     <div class="hero-row">
-      <p class="pitch">I build <span class="slot"><span class="slot-in" id="slot"><span>coding games.</span><span>AI tutors.</span><span>trading bots.</span><span>neural nets.</span><span>stock screeners.</span><span>vision turrets.</span><span>pair trades.</span></span></span></p>
+      <p class="pitch">I build <span class="slot"><span class="slot-in" id="slot"><span>vision turrets.</span><span>coding games.</span><span>AI tutors.</span><span>trading bots.</span><span>neural nets.</span><span>stock screeners.</span><span>pair trades.</span></span></span></p>
       <div>
         <p class="sub">Finance, statistics, and math at Rutgers with a CS minor, headed for quantitative finance. Here are seven builds, and each one is running live on this page.</p>
-        <p class="mono" style="margin:12px 0 0">↳ drag through my name · click it to detonate</p>
+        <p class="mono" style="margin:12px 0 0">↳ click anywhere to fire the turret · hold for full auto · shoot the drones</p>
       </div>
     </div>
     <div class="jump">
-      <a class="chip hot" href="#codewarrior"><b>NEW</b>CodeWarrior</a>
+      <a class="chip hot" href="#turret"><b>01</b>AI Turret</a>
+      <a class="chip" href="#codewarrior"><b>NEW</b>CodeWarrior</a>
       <a class="chip" href="#redline"><b>03</b>Redline · HackRU</a>
       <a class="chip" href="#pairs"><b>04</b>Pair trading</a>
       <a class="chip" href="#btc"><b>05</b>Bitcoin bot</a>
     </div>
   </div>
   <div class="tape" aria-hidden="true"><div class="tape-in">
-    <span>CODEWARRIOR <b class="am">7 WORLDS</b></span><span>REDLINE <b class="rd">● SHIPPED IN 24H</b></span><span>PAIRS <b class="up">|ρ| ≥ 0.80</b></span><span>BTC.BOT <b class="up">WEBHOOK → SHEETS</b></span><span>DQN <b class="am">GEN 1,000+</b></span><span>GARDEN STATE CTF <b class="am">5TH / 500+ TEAMS</b></span><span>PURPLE COMET <b class="up">TOP 20 NJ</b></span><span>SCREENER <b class="up">20+ FILTERS</b></span><span>TURRET <b class="rd">FIST → FIRE</b></span>
-    <span>CODEWARRIOR <b class="am">7 WORLDS</b></span><span>REDLINE <b class="rd">● SHIPPED IN 24H</b></span><span>PAIRS <b class="up">|ρ| ≥ 0.80</b></span><span>BTC.BOT <b class="up">WEBHOOK → SHEETS</b></span><span>DQN <b class="am">GEN 1,000+</b></span><span>GARDEN STATE CTF <b class="am">5TH / 500+ TEAMS</b></span><span>PURPLE COMET <b class="up">TOP 20 NJ</b></span><span>SCREENER <b class="up">20+ FILTERS</b></span><span>TURRET <b class="rd">FIST → FIRE</b></span>
+    <span>TURRET <b class="rd">FIST → FIRE</b></span><span>CODEWARRIOR <b class="am">7 WORLDS</b></span><span>REDLINE <b class="rd">● SHIPPED IN 24H</b></span><span>PAIRS <b class="up">|ρ| ≥ 0.80</b></span><span>BTC.BOT <b class="up">WEBHOOK → SHEETS</b></span><span>DQN <b class="am">GEN 1,000+</b></span><span>GARDEN STATE CTF <b class="am">5TH / 500+ TEAMS</b></span><span>PURPLE COMET <b class="up">TOP 20 NJ</b></span><span>SCREENER <b class="up">20+ FILTERS</b></span>
+    <span>TURRET <b class="rd">FIST → FIRE</b></span><span>CODEWARRIOR <b class="am">7 WORLDS</b></span><span>REDLINE <b class="rd">● SHIPPED IN 24H</b></span><span>PAIRS <b class="up">|ρ| ≥ 0.80</b></span><span>BTC.BOT <b class="up">WEBHOOK → SHEETS</b></span><span>DQN <b class="am">GEN 1,000+</b></span><span>GARDEN STATE CTF <b class="am">5TH / 500+ TEAMS</b></span><span>PURPLE COMET <b class="up">TOP 20 NJ</b></span><span>SCREENER <b class="up">20+ FILTERS</b></span>
   </div></div>
 </header>
 
 <main>
-<!-- 01 CODEWARRIOR -->
-<section class="ch" id="codewarrior"><div class="wrap">
+<!-- 01 TURRET -->
+<section class="ch" id="turret"><div class="wrap">
   <div class="ch-num" aria-hidden="true">01</div>
   <div class="txt">
-    <div class="mono eyebrow">01 · EdTech startup · In development · Fall 2026</div>
-    <h2>CodeWarrior</h2>
-    <div class="what"><span class="mono lbl">What it is</span><p>A game that teaches kids to code: you forge a warrior, travel a world map, and beat monsters by writing the missing piece of real code.</p></div>
-    <div class="how"><span class="mono lbl">How it works</span><p class="lede">Each world covers one concept, from syntax and if statements to loops, strings, arrays, and classes. Battles are fill-in-the-blank code questions, and every correct answer lands a hit. Boss fights test the whole world, like popping a recursive call stack. Students sign up with just a name and password, and teachers link a class with a code.</p></div>
-    <span class="mono lbl" style="margin-bottom:-8px">By the numbers</span>
-    <ul class="facts">
-      <li><b>7</b><span>worlds, Syntax Shore to LeetCode Citadel</span></li>
-      <li><b>5</b><span>code questions per battle</span></li>
-      <li><b>0</b><span>emails needed to sign up</span></li>
-    </ul>
-    <div class="bug"><span class="mono lbl">The idea</span><p>Coding feels like homework until it feels like a game. Every hit in CodeWarrior is a line of code the student actually got right.</p></div>
-    <div class="tags"><span>Game design</span><span>EdTech</span><span>Product design</span><span>Startup</span></div>
-    <div class="with">Team project · inspired by Tech Start at Rutgers</div>
-  </div>
-  <figure class="sim"><canvas id="sim-cw" aria-label="CodeWarrior battle: pick the missing code to strike the monster"></canvas>
-    <figcaption><span class="mono live">Playable</span><span class="mono">Tap the right code to strike</span></figcaption></figure>
-</div></section>
-
-<!-- 02 TURRET -->
-<section class="ch g flip" id="turret"><div class="wrap">
-  <div class="ch-num" aria-hidden="true">02</div>
-  <div class="txt">
-    <div class="mono eyebrow">02 · AI + Hardware · February to March 2026</div>
+    <div class="mono eyebrow">01 · AI + Hardware · February to March 2026</div>
     <h2>AI-Powered Computer Vision Turret</h2>
     <div class="what"><span class="mono lbl">What it is</span><p>A real-time turret with three modes: manual control, hand tracking that fires when you make a fist, and face tracking that recognizes specific people.</p></div>
     <div class="how"><span class="mono lbl">How it works</span><p class="lede">Built in Python with OpenCV and MediaPipe hand tracking. A closed fist triggers firing and pyUSB drives the hardware. A TensorFlow face recognition model, trained on a custom image dataset, identifies and tracks individuals in live video.</p></div>
@@ -286,6 +268,28 @@ html.still{scroll-behavior:auto}
   </div>
   <figure class="sim"><canvas id="sim-turret" aria-label="Turret simulation tracking a hand or face target and firing on a fist"></canvas>
     <figcaption><span class="modes" id="tmodes"><button type="button" data-m="0">Manual</button><button type="button" data-m="1">Hand</button><button type="button" data-m="2">Face</button></span><span class="mono">Move to aim · hold to fire</span></figcaption></figure>
+</div></section>
+
+<!-- 02 CODEWARRIOR -->
+<section class="ch g flip" id="codewarrior"><div class="wrap">
+  <div class="ch-num" aria-hidden="true">02</div>
+  <div class="txt">
+    <div class="mono eyebrow">02 · EdTech startup · In development · Fall 2026</div>
+    <h2>CodeWarrior</h2>
+    <div class="what"><span class="mono lbl">What it is</span><p>A game that teaches kids to code: you forge a warrior, travel a world map, and beat monsters by writing the missing piece of real code.</p></div>
+    <div class="how"><span class="mono lbl">How it works</span><p class="lede">Each world covers one concept, from syntax and if statements to loops, strings, arrays, and classes. Battles are fill-in-the-blank code questions, and every correct answer lands a hit. Boss fights test the whole world, like popping a recursive call stack. Students sign up with just a name and password, and teachers link a class with a code.</p></div>
+    <span class="mono lbl" style="margin-bottom:-8px">By the numbers</span>
+    <ul class="facts">
+      <li><b>7</b><span>worlds, Syntax Shore to LeetCode Citadel</span></li>
+      <li><b>5</b><span>code questions per battle</span></li>
+      <li><b>0</b><span>emails needed to sign up</span></li>
+    </ul>
+    <div class="bug"><span class="mono lbl">The idea</span><p>Coding feels like homework until it feels like a game. Every hit in CodeWarrior is a line of code the student actually got right.</p></div>
+    <div class="tags"><span>Game design</span><span>EdTech</span><span>Product design</span><span>Startup</span></div>
+    <div class="with">Team project · inspired by Tech Start at Rutgers</div>
+  </div>
+  <figure class="sim"><canvas id="sim-cw" aria-label="CodeWarrior battle: pick the missing code to strike the monster"></canvas>
+    <figcaption><span class="mono live">Playable</span><span class="mono">Tap the right code to strike</span></figcaption></figure>
 </div></section>
 
 <!-- 03 REDLINE -->
@@ -525,7 +529,8 @@ function hero(o){
     x.fillStyle=C.green;for(const p of acc)x.fillRect(p.x,p.y,size,size);
     x.fillStyle=C.goldD;for(const p of hot)x.fillRect(p.x,p.y,size,size);
   }
-  return{step,draw,resize:build};
+  function blast(bx,by,F){P.forEach(p=>{const dx=p.x-bx,dy=p.y-by,d=Math.hypot(dx,dy)+1,f=(30+R()*40)*F*Math.exp(-d/(200*F));p.vx+=dx/d*f;p.vy+=dy/d*f})}
+  return{step,draw,resize:build,blast};
 }
 
 /* ---------- 01 REDLINE ---------- */
@@ -820,7 +825,8 @@ function codewarrior(o){
   return{step,draw};
 }
 
-reg('hero-cv',hero);
+const hE=reg('hero-cv',hero);
+window.__heroBlast=(cx,cy,F)=>{if(!hE)return;const r=hE.o.cv.getBoundingClientRect();if(cx<r.left-120||cx>r.right+120||cy<r.top-120||cy>r.bottom+120)return;hE.s.blast((cx-r.left)*hE.o.W/r.width,(cy-r.top)*hE.o.H/r.height,F)};
 reg('sim-cw',codewarrior);
 reg('sim-redline',redline,560);
 reg('sim-pair',pair);
@@ -889,8 +895,9 @@ if(!reduce)requestAnimationFrame(loop);
   function fit(){const d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*d;cv.height=H*d;x.setTransform(d,0,0,d,0,0);
     const n=Math.round(W*H/20000);pts=Array.from({length:n},()=>({x:R()*W,y:R()*H,vx:(R()-.5)*.35,vy:(R()-.5)*.35,c:cols[Math.floor(R()*3)]}))}
   fit();addEventListener('resize',fit);addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY});
+  window.__bgBlast=(bx,by,F)=>{const off=scrollY*.12;pts.forEach(p=>{const py=((p.y-off)%H+H)%H,dx=p.x-bx,dy=py-by,d=Math.hypot(dx,dy)+1;if(d<320*F){const f=(1-d/(320*F))*9*F;p.vx+=dx/d*f;p.vy+=dy/d*f}})};
   function frame(){x.clearRect(0,0,W,H);const off=scrollY*.12;
-    const Y=pts.map(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;return((p.y-off)%H+H)%H});
+    const Y=pts.map(p=>{if(Math.abs(p.vx)+Math.abs(p.vy)>.5){p.vx*=.96;p.vy*=.96}p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=0;if(p.x>W)p.x=W;if(p.y<0)p.y=0;if(p.y>H)p.y=H;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;return((p.y-off)%H+H)%H});
     x.lineWidth=1;
     for(let i=0;i<pts.length;i++){const a=pts[i],ay=Y[i];
       for(let j=i+1;j<pts.length;j++){const d=Math.hypot(a.x-pts[j].x,ay-Y[j]);if(d<130){x.strokeStyle=`rgba(30,107,80,${(1-d/130)*.13})`;x.beginPath();x.moveTo(a.x,ay);x.lineTo(pts[j].x,Y[j]);x.stroke()}}
@@ -899,19 +906,169 @@ if(!reduce)requestAnimationFrame(loop);
     if(!reduce)requestAnimationFrame(frame)}
   frame()})();
 
-/* ---------- cursor sparks + click shockwaves ---------- */
-(function(){if(reduce)return;const cv=document.getElementById('fx-cv'),x=cv.getContext('2d');let W,H,P=[],rings=[],lx=null,ly=null,run=false;
-  const cols=['#c89b2c','#1e6b50','#e2b84a','#0e2a22'];
+/* ---------- SITE TURRET: click anywhere to fire, everything reacts ---------- */
+(function(){
+  const cv=document.getElementById('fx-cv'),x=cv.getContext('2d');let W,H;
+  const fine=matchMedia('(pointer: fine)').matches;
+  const cols=['#c89b2c','#1e6b50','#e2b84a','#0e2a22','#d9503f'];
+  let P=[],rings=[],shots=[],shells=[],marks=[],falls=[],drones=[],pops=[],lx=null,ly=null,mx=innerWidth/2,my=innerHeight*.35;
+  let ang=-Math.PI/2,recoil=0,flash=0,heat=0,score=0,hits=0,combo=0,lastHit=0,shotN=0,shake=0,od=0,auto=null,holdT=null,started=false,nextDrone=240,tick=0,kills=0;
   function fit(){const d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*d;cv.height=H*d;x.setTransform(d,0,0,d,0,0)}
-  fit();addEventListener('resize',fit);
-  const kick=()=>{if(!run){run=true;requestAnimationFrame(frame)}};
-  addEventListener('pointermove',e=>{if(lx!==null){const d=Math.hypot(e.clientX-lx,e.clientY-ly);for(let i=0;i<Math.min(5,d/7);i++)P.push({x:e.clientX,y:e.clientY,vx:(R()-.5)*1.6,vy:(R()-.5)*1.6+.4,l:1,c:cols[Math.floor(R()*4)]})}lx=e.clientX;ly=e.clientY;kick()});
-  addEventListener('pointerdown',e=>{rings.push({x:e.clientX,y:e.clientY,r:4,l:1});for(let i=0;i<28;i++){const a=R()*6.283,v=2+R()*6;P.push({x:e.clientX,y:e.clientY,vx:Math.cos(a)*v,vy:Math.sin(a)*v,l:1,c:cols[i%4]})}kick()});
-  function frame(){x.clearRect(0,0,W,H);
-    for(const p of P){p.x+=p.vx;p.y+=p.vy;p.vx*=.95;p.vy=p.vy*.95+.05;p.l-=.028;x.globalAlpha=Math.max(0,p.l);x.fillStyle=p.c;x.beginPath();x.arc(p.x,p.y,2.4*p.l+.4,0,7);x.fill()}
-    for(const r of rings){r.r+=7;r.l-=.035;x.globalAlpha=Math.max(0,r.l);x.strokeStyle='#c89b2c';x.lineWidth=2;x.beginPath();x.arc(r.x,r.y,r.r,0,7);x.stroke();x.strokeStyle='#1e6b50';x.beginPath();x.arc(r.x,r.y,r.r*.6,0,7);x.stroke()}
-    x.globalAlpha=1;P=P.filter(p=>p.l>0);rings=rings.filter(r=>r.l>0);if(P.length>400)P.splice(0,P.length-400);
-    if(P.length||rings.length)requestAnimationFrame(frame);else run=false}
+  fit();addEventListener('resize',()=>{fit();pool=null});
+  const S=()=>W<600?.75:1;
+  const base=()=>({x:W/2,y:H+4});
+  const BL=()=>58*S();
+
+  /* things that get blasted */
+  const SEL='.ch h2 .l,.chip,.tags span,.skills span,.facts li,.what,.bug,.win,.stat,.btn,.eyebrow,.lbl,.sim,.cv li,.place,.hero-top span,.pitch,.sub,.email,.copy,.idx a,.logo,.with,.lede,.ch-num,.sec h2,.about h2,footer .mono,.hero .mono';
+  let pool=null;const getPool=()=>pool||(pool=[...document.querySelectorAll(SEL)]);
+  const busy=new WeakSet();
+  function blastDOM(tx,ty,F){
+    const Rr=170*F;
+    for(const el of getPool()){
+      const r=el.getBoundingClientRect();if(r.bottom<-40||r.top>H+40||!r.width)continue;
+      const nx=cl(tx,r.left,r.right),ny=cl(ty,r.top,r.bottom),dist=Math.hypot(tx-nx,ty-ny);if(dist>Rr)continue;
+      const cx=r.left+r.width/2,cy=r.top+r.height/2,dd=Math.hypot(cx-tx,cy-ty)+1,f=Math.pow(1-dist/Rr,1.4)*F,small=r.width*r.height<9000;
+      const isL=el.classList.contains('l');
+      if(isL&&f>.55&&el.style.visibility!=='hidden'&&falls.length<160){detach(el,r,tx,ty,f);continue}
+      if(busy.has(el))continue;busy.add(el);
+      const m=f*(small?70:26),dx=(cx-tx)/dd*m,dy=(cy-ty)/dd*m-(small?f*20:0),rot=(R()-.5)*f*(small?70:9);
+      const an=el.animate([{transform:'translate(0,0)'},{transform:`translate(${dx}px,${dy}px) rotate(${rot}deg) scale(${1+f*.18})`,offset:.16},{transform:`translate(${-dx*.25}px,${-dy*.25}px) rotate(${-rot*.3}deg)`,offset:.5},{transform:'translate(0,0)'}],{duration:650+f*600,easing:'cubic-bezier(.2,.8,.25,1)',composite:'add'});
+      an.onfinish=an.oncancel=()=>busy.delete(el);
+      if(el.classList.contains('ch-num'))el.animate([{opacity:.95,color:'rgba(217,80,63,.35)'},{opacity:.28,color:'transparent'}],{duration:700});
+      if(el.classList.contains('sim')||el.classList.contains('stat')||el.classList.contains('win')||el.classList.contains('what'))el.animate([{filter:'brightness(1.6) saturate(1.5)'},{filter:'none'}],{duration:350});
+    }
+  }
+  function detach(el,r,tx,ty,f){
+    const h2=el.closest('h2'),cs=getComputedStyle(h2);el.style.visibility='hidden';
+    const cx=r.left+r.width/2,cy=r.top+r.height/2,dd=Math.hypot(cx-tx,cy-ty)+1,v=6+f*12;
+    falls.push({ch:el.textContent,x:cx,y:cy,vx:(cx-tx)/dd*v+(R()-.5)*3,vy:(cy-ty)/dd*v-6-R()*5,rot:0,vr:(R()-.5)*.5,font:`${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`,col:R()<.3?'#d9503f':R()<.5?'#c89b2c':cs.color,l:1,age:0,b:0});
+    setTimeout(()=>{el.style.visibility='';el.animate([{transform:'translateY(-30px) scale(0) rotate(-120deg)',opacity:0},{transform:'none',opacity:1}],{duration:600,easing:'cubic-bezier(.3,1.7,.5,1)',composite:'add'})},2400+R()*900);
+  }
+
+  /* firing */
+  function fire(tx,ty){
+    const b=base();started=true;
+    const shoot=(px,py)=>{const a=Math.atan2(py-b.y,px-b.x),bl=BL(),sx=b.x+Math.cos(a)*bl,sy=b.y+Math.sin(a)*bl,dist=Math.hypot(px-sx,py-sy);
+      shotN++;const big=shotN%10===0;shots.push({sx,sy,tx:px,ty:py,p:0,dp:Math.max(48/Math.max(1,dist),1/16),big,tr:[]});return a};
+    ang=shoot(tx,ty);
+    if(od>0){const b2=base(),d=Math.hypot(tx-b2.x,ty-b2.y);[-.1,.1].forEach(o=>{const a=Math.atan2(ty-b2.y,tx-b2.x)+o;shoot(b2.x+Math.cos(a)*d,b2.y+Math.sin(a)*d)})}
+    recoil=12;flash=1;heat=Math.min(1,heat+.1);
+    const side=Math.cos(ang)>0?-1:1;shells.push({x:b.x,y:b.y-26*S(),vx:side*(2+R()*3),vy:-7-R()*4,r:R()*6,vr:(R()-.5)*.7,l:1,bn:0});
+    const ret=document.getElementById('reticle');ret&&ret.animate([{scale:'1.7'},{scale:'1'}],{duration:200});
+  }
+  function impact(tx,ty,big){
+    const F=big?1.9:1;
+    rings.push({x:tx,y:ty,r:4,l:1,w:big?4:2.5,c:'#d9503f'},{x:tx,y:ty,r:2,l:1,w:2,c:'#c89b2c',s:.6});if(big)rings.push({x:tx,y:ty,r:10,l:1,w:6,c:'#e2b84a',s:1.6});
+    const n=big?90:34;for(let i=0;i<n;i++){const a=R()*6.283,v=2+R()*(big?13:8);P.push({x:tx,y:ty,vx:Math.cos(a)*v,vy:Math.sin(a)*v-2,l:1,c:cols[i%5],g:.18,sz:R()<.3?4:2.4})}
+    for(let i=0;i<(big?14:6);i++){const a=-Math.PI*R(),v=4+R()*7;P.push({x:tx,y:ty,vx:Math.cos(a)*v,vy:Math.sin(a)*v,l:1.4,c:R()<.5?'#0f3329':'#f4efe2',g:.35,sq:1,rot:R()*6,sz:3+R()*4})}
+    marks.push({x:tx,y:ty+scrollY,l:1,r:(big?34:16)+R()*6,a:R()*6});if(marks.length>40)marks.shift();
+    shake=Math.min(30,shake+(big?20:6));
+    const now=performance.now();combo=now-lastHit<900?combo+1:1;lastHit=now;hits++;score+=1*Math.max(1,Math.floor(combo/5));
+    if(combo>2)pops.push({x:tx+(R()-.5)*20,y:ty-20,t:`×${combo}`,l:1,c:combo>=10?'#d9503f':'#8a6610',z:14+Math.min(18,combo)});
+    if(big&&od<=0)pops.push({x:tx,y:ty-46,t:'MEGA SHOT',l:1.3,c:'#d9503f',z:28});
+    if(combo===15&&od<=0){od=300;pops.push({x:W/2,y:H*.42,t:'OVERDRIVE',l:1.8,c:'#d9503f',z:Math.min(90,W/8),big:1});shake=34;
+      document.querySelectorAll('.ch h2').forEach(h=>{h.classList.remove('glitch');void h.offsetWidth;h.classList.add('glitch')})}
+    blastDOM(tx,ty,F);
+    window.__heroBlast&&window.__heroBlast(tx,ty,F);window.__bgBlast&&window.__bgBlast(tx,ty,F);
+    for(const d of drones){if(!d.dead&&Math.hypot(d.x-tx,d.y-ty)<(big?130:46)*S())kill(d)}
+    const pb=document.getElementById('prog');pb&&pb.animate([{background:'#d9503f',height:'7px'},{}],{duration:400});
+  }
+  function kill(d){d.dead=1;kills++;score+=50;shake=Math.min(34,shake+16);
+    for(let i=0;i<70;i++){const a=R()*6.283,v=3+R()*11;P.push({x:d.x,y:d.y,vx:Math.cos(a)*v,vy:Math.sin(a)*v,l:1.3,c:i%3?'#e2b84a':'#d9503f',g:.12,sz:3})}
+    for(let i=0;i<8;i++){const a=R()*6.283,v=3+R()*6;P.push({x:d.x,y:d.y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-3,l:1.6,c:'#0f3329',g:.3,sq:1,rot:R()*6,sz:5+R()*5})}
+    rings.push({x:d.x,y:d.y,r:8,l:1,w:6,c:'#e2b84a',s:1.8});
+    pops.push({x:d.x,y:d.y-30,t:'+50 DRONE DOWN',l:1.4,c:'#1e6b50',z:20});
+    blastDOM(d.x,d.y,1.3);
+  }
+
+  /* input */
+  const noFire=e=>(e.button||0)>0||e.target.closest('a,button,input,textarea,select,label,#sim-turret,#sim-cw,#tmodes,.email');
+  const kick=()=>{};
+  addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;if(lx!==null){const d=Math.hypot(e.clientX-lx,e.clientY-ly);for(let i=0;i<Math.min(5,d/7);i++)P.push({x:e.clientX,y:e.clientY,vx:(R()-.5)*1.6,vy:(R()-.5)*1.6+.4,l:1,c:cols[Math.floor(R()*4)],g:.05,sz:2.4})}lx=e.clientX;ly=e.clientY});
+  const stop=()=>{clearTimeout(holdT);clearInterval(auto);auto=null};
+  addEventListener('pointerdown',e=>{mx=e.clientX;my=e.clientY;
+    if(noFire(e)){rings.push({x:mx,y:my,r:4,l:1,w:2,c:'#c89b2c'});return}
+    fire(mx,my);stop();holdT=setTimeout(()=>{auto=setInterval(()=>fire(mx,my),od>0?55:95)},230)});
+  addEventListener('pointerup',stop);addEventListener('pointercancel',stop);addEventListener('blur',stop);
+
+  /* world: scroll skew + screen shake */
+  const main=document.querySelector('main'),hdr=document.querySelector('header.hero');let sk=0,lastS=scrollY,lastTr='';
+  const tapeA=(document.querySelector('.tape-in')||{getAnimations:()=>[]}).getAnimations?.()[0];
+
+  function drawDrone(d){x.save();x.translate(d.x,d.y);x.rotate(Math.sin(d.t/20)*.18+d.vx*.04);const s=S();x.scale(s,s);
+    x.strokeStyle='#0e2a22';x.lineWidth=3;x.beginPath();x.moveTo(-24,-6);x.lineTo(24,-6);x.stroke();
+    [-24,24].forEach(r=>{const w=13*Math.abs(Math.cos(d.t*.8+r));x.strokeStyle='rgba(14,42,34,.75)';x.lineWidth=2.5;x.beginPath();x.moveTo(r-w,-11);x.lineTo(r+w,-11);x.stroke();x.fillStyle='#0e2a22';x.fillRect(r-2,-11,4,6)});
+    x.fillStyle='#0f3329';x.beginPath();for(let i=0;i<6;i++){const a=i/6*6.283+Math.PI/6;x.lineTo(Math.cos(a)*14,Math.sin(a)*14)}x.closePath();x.fill();x.strokeStyle='#e2b84a';x.lineWidth=2;x.stroke();
+    x.fillStyle=d.t%30<15?'#ff6b5b':'#8a2a20';x.shadowColor='#ff6b5b';x.shadowBlur=10;x.beginPath();x.arc(0,0,4.5,0,7);x.fill();x.shadowBlur=0;
+    const nr=Math.hypot(mx-d.x,my-d.y)<90;if(nr){x.strokeStyle='#d9503f';x.lineWidth=1.5;const L=8,Q=26;[[-1,-1],[1,-1],[-1,1],[1,1]].forEach(([a,b])=>{x.beginPath();x.moveTo(a*Q,b*Q+(-b)*L);x.lineTo(a*Q,b*Q);x.lineTo(a*Q+(-a)*L,b*Q);x.stroke()})}
+    x.restore()}
+
+  function frame(){tick++;x.clearRect(0,0,W,H);
+    // world transform
+    const v=scrollY-lastS;lastS=scrollY;sk+=(cl(v*.1,-2.2,2.2)-sk)*.12;shake*=.86;
+    const sx=(R()-.5)*shake,sy=(R()-.5)*shake,on=Math.abs(sk)>.03||shake>.4;
+    const tr=on?`translate(${sx.toFixed(1)}px,${sy.toFixed(1)}px) skewY(${sk.toFixed(2)}deg)`:'';
+    if(tr!==lastTr){main.style.transform=tr;hdr.style.transform=tr;lastTr=tr}
+    heat*=.985;if(tapeA)tapeA.playbackRate=1+heat*7+Math.min(4,Math.abs(v)*.08);
+    if(od>0)od--;
+    // drones
+    if(started&&--nextDrone<=0&&drones.filter(d=>!d.dead).length<3){const l=R()<.5;drones.push({x:l?-40:W+40,y:H*(.14+R()*.4),vx:(l?1:-1)*(1.2+R()*1.6),t:0});nextDrone=260+R()*300}
+    drones=drones.filter(d=>!d.dead&&d.x>-80&&d.x<W+80);
+    // scorch marks (scroll with page)
+    for(const m of marks){m.l-=.0045;const y=m.y-scrollY;if(y<-60||y>H+60)continue;x.globalAlpha=Math.max(0,m.l)*.5;
+      const g=x.createRadialGradient(m.x,y,0,m.x,y,m.r);g.addColorStop(0,'rgba(14,42,34,.75)');g.addColorStop(.6,'rgba(138,102,16,.25)');g.addColorStop(1,'rgba(14,42,34,0)');x.fillStyle=g;x.beginPath();x.arc(m.x,y,m.r,0,7);x.fill();
+      x.strokeStyle='rgba(14,42,34,.6)';x.lineWidth=1;x.beginPath();for(let i=0;i<5;i++){const a=m.a+i*1.25;x.moveTo(m.x,y);x.lineTo(m.x+Math.cos(a)*m.r*1.3,y+Math.sin(a)*m.r*1.3)}x.stroke()}
+    marks=marks.filter(m=>m.l>0);x.globalAlpha=1;
+    // overdrive vignette
+    if(od>0){const pulse=.5+.5*Math.sin(tick/5);const g=x.createRadialGradient(W/2,H/2,Math.min(W,H)*.3,W/2,H/2,Math.max(W,H)*.75);g.addColorStop(0,'rgba(217,80,63,0)');g.addColorStop(1,`rgba(217,80,63,${.14+.12*pulse})`);x.fillStyle=g;x.fillRect(0,0,W,H)}
+    for(const d of drones){d.t++;d.x+=d.vx;d.y+=Math.sin(d.t/25)*.8;drawDrone(d)}
+    // shots
+    for(const s of shots){s.p+=s.dp;const px=s.sx+(s.tx-s.sx)*Math.min(1,s.p),py=s.sy+(s.ty-s.sy)*Math.min(1,s.p);s.tr.push([px,py]);if(s.tr.length>7)s.tr.shift();
+      x.strokeStyle=s.big?'rgba(217,80,63,.8)':'rgba(226,184,74,.75)';x.lineWidth=s.big?6:3;x.lineCap='round';x.beginPath();s.tr.forEach((q,i)=>i?x.lineTo(q[0],q[1]):x.moveTo(q[0],q[1]));x.stroke();
+      x.fillStyle=s.big?'#ff6b5b':'#fff3c4';x.shadowColor=s.big?'#d9503f':'#e2b84a';x.shadowBlur=s.big?24:14;x.beginPath();x.arc(px,py,s.big?7:4,0,7);x.fill();x.shadowBlur=0;
+      if(s.p>=1){s.done=1;impact(s.tx,s.ty,s.big)}}
+    shots=shots.filter(s=>!s.done);
+    // particles
+    for(const p of P){p.x+=p.vx;p.y+=p.vy;p.vx*=.96;p.vy=p.vy*.96+(p.g||.05);p.l-=.022;x.globalAlpha=Math.max(0,Math.min(1,p.l));x.fillStyle=p.c;
+      if(p.sq){p.rot+=.2;x.save();x.translate(p.x,p.y);x.rotate(p.rot);x.fillRect(-p.sz/2,-p.sz/2,p.sz,p.sz);x.restore()}else{x.beginPath();x.arc(p.x,p.y,p.sz*Math.min(1,p.l)+.4,0,7);x.fill()}}
+    for(const r of rings){r.r+=7*(r.s||1);r.l-=.035;x.globalAlpha=Math.max(0,r.l);x.strokeStyle=r.c;x.lineWidth=r.w;x.beginPath();x.arc(r.x,r.y,r.r,0,7);x.stroke()}
+    x.globalAlpha=1;P=P.filter(p=>p.l>0&&p.y<H+40);rings=rings.filter(r=>r.l>0);if(P.length>900)P.splice(0,P.length-900);
+    // falling letters
+    for(const f of falls){f.age++;f.vy+=.5;f.x+=f.vx;f.y+=f.vy;f.rot+=f.vr;f.vx*=.99;
+      if(f.y>H-12&&f.vy>0){f.y=H-12;f.vy*=-.45;f.vx*=.7;f.vr*=.6;f.b++}
+      if(f.age>110)f.l-=.03;x.globalAlpha=Math.max(0,f.l);x.save();x.translate(f.x,f.y);x.rotate(f.rot);x.font=f.font;x.fillStyle=f.col;x.textAlign='center';x.textBaseline='middle';x.fillText(f.ch,0,0);x.restore()}
+    falls=falls.filter(f=>f.l>0);x.globalAlpha=1;
+    // shells
+    for(const c of shells){c.vy+=.45;c.x+=c.vx;c.y+=c.vy;c.r+=c.vr;if(c.y>H-4&&c.vy>0){c.y=H-4;c.vy*=-.4;c.vx*=.6;c.bn++}if(c.bn>2)c.l-=.04;
+      x.globalAlpha=Math.max(0,c.l);x.save();x.translate(c.x,c.y);x.rotate(c.r);x.fillStyle='#c89b2c';x.fillRect(-4,-2,8,4);x.fillStyle='#8a6610';x.fillRect(2,-2,2,4);x.restore()}
+    shells=shells.filter(c=>c.l>0);x.globalAlpha=1;
+    // turret
+    const b=base(),s=S(),bl=BL();
+    if(!auto){const want=Math.atan2(Math.min(my,b.y-40)-b.y,mx-b.x);ang+=wrapA(want-ang)*.18}
+    ang=cl(ang,-Math.PI+.12,-.12);recoil*=.75;
+    if(fine&&my<b.y-40){x.strokeStyle=od>0?'rgba(217,80,63,.5)':'rgba(217,80,63,.22)';x.setLineDash([3,7]);x.lineDashOffset=-tick;x.lineWidth=1.2;x.beginPath();x.moveTo(b.x+Math.cos(ang)*bl,b.y+Math.sin(ang)*bl);x.lineTo(mx,my);x.stroke();x.setLineDash([])}
+    x.save();x.translate(b.x,b.y);x.rotate(ang);const rc=-recoil*s;
+    x.fillStyle='#174337';x.fillRect(rc,-9*s,bl,18*s);
+    x.fillStyle=`rgb(${Math.round(42+heat*175)},${Math.round(90-heat*10)},${Math.round(75-heat*12)})`;x.fillRect(rc+bl*.35,-6*s,bl*.55,12*s);
+    x.fillStyle='#e2b84a';x.fillRect(rc+bl-9*s,-11*s,9*s,22*s);
+    if(od>0){x.fillStyle='#d9503f';x.fillRect(rc+bl*.15,-13*s,6*s,26*s)}
+    if(flash>.05){x.globalAlpha=flash;x.fillStyle='#fff3c4';x.shadowColor='#e2b84a';x.shadowBlur=30;x.beginPath();const fx=rc+bl+4*s;for(let i=0;i<10;i++){const a=i/10*6.283,rr=(i%2?8:26)*s*(.7+R()*.5);x.lineTo(fx+Math.cos(a)*rr*1.3,Math.sin(a)*rr*.7)}x.closePath();x.fill();x.shadowBlur=0;x.globalAlpha=1}
+    x.restore();flash*=.6;
+    x.fillStyle='#0f3329';x.beginPath();x.arc(b.x,b.y,40*s,Math.PI,0);x.fill();
+    x.strokeStyle='#e2b84a';x.lineWidth=2.5;x.beginPath();x.arc(b.x,b.y,40*s,Math.PI,0);x.stroke();
+    x.strokeStyle='rgba(127,220,164,.6)';x.setLineDash([4,5]);x.lineDashOffset=tick*.5;x.lineWidth=1.5;x.beginPath();x.arc(b.x,b.y,30*s,Math.PI,0);x.stroke();x.setLineDash([]);
+    x.fillStyle=od>0?'#ff6b5b':heat>.6?'#e2b84a':'#7fdca4';x.beginPath();x.arc(b.x,b.y-18*s,3.5*s,0,7);x.fill();
+    // HUD
+    x.font=`600 ${W<600?9:11}px ${MONO}`;x.textBaseline='alphabetic';
+    if(!started){x.globalAlpha=.6+.4*Math.sin(tick/14);x.fillStyle='#0e2a22';x.textAlign='center';x.fillText('CLICK ANYWHERE TO FIRE',b.x,b.y-50*s);x.textAlign='left';x.globalAlpha=1}
+    else{const cmb=performance.now()-lastHit<900&&combo>1,hw=W<600?84:108;x.fillStyle='rgba(244,239,226,.88)';x.beginPath();x.roundRect(b.x-52*s-hw-8,H-44,hw+12,40,10);x.roundRect(b.x+52*s-4,H-44,hw+12,40,10);x.fill();x.textAlign='right';x.fillStyle='#0e2a22';x.fillText(`SCORE ${String(score).padStart(4,'0')}`,b.x-52*s,H-28);x.fillStyle=cmb?'#d9503f':'#56695f';x.fillText(cmb?`COMBO ×${combo}`:`HITS ${hits}`,b.x-52*s,H-12);
+      x.textAlign='left';x.fillStyle=od>0?'#d9503f':'#56695f';x.fillText(od>0?`OVERDRIVE ${Math.ceil(od/60)}s`:`HEAT ${Math.round(heat*100)}%`,b.x+52*s,H-28);x.fillStyle='#1e6b50';x.fillText(`DRONES ${kills}`,b.x+52*s,H-12)}
+    // pops
+    for(const p of pops){p.l-=.018;p.y-=p.big?.3:1.1;const a=Math.max(0,Math.min(1,p.l));x.globalAlpha=a;x.font=`800 ${p.z*(p.big?(1+(1-Math.min(1,p.l))*.3):1)}px "Bricolage Grotesque", sans-serif`;x.textAlign='center';x.lineWidth=p.big?8:5;x.strokeStyle='#f4efe2';x.strokeText(p.t,p.x,p.y);x.fillStyle=p.c;x.fillText(p.t,p.x,p.y)}
+    pops=pops.filter(p=>p.l>0);x.globalAlpha=1;x.textAlign='left';
+    requestAnimationFrame(frame)}
+  requestAnimationFrame(frame);
 })();
 
 /* ---------- letter-split titles ---------- */

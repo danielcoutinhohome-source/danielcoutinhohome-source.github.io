@@ -284,7 +284,7 @@ html.still{scroll-behavior:auto}
     <span class="mono lbl" style="margin-bottom:-8px">By the numbers</span>
     <ul class="facts">
       <li><b>7</b><span>worlds, Syntax Shore to LeetCode Citadel</span></li>
-      <li><b>5</b><span>code questions per battle</span></li>
+      <li><b>Varies</b><span>code questions per battle, by monster</span></li>
       <li><b>0</b><span>emails needed to sign up</span></li>
     </ul>
     <div class="bug"><span class="mono lbl">The idea</span><p>Coding feels like homework until it feels like a game. Every hit in CodeWarrior is a line of code the student actually got right.</p></div>
@@ -944,7 +944,7 @@ if(!reduce)requestAnimationFrame(loop);
   const RATE=430,RELOAD=1300;
   function fit(){DP=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*DP;cv.height=H*DP;x.setTransform(DP,0,0,DP,0,0)}
   fit();
-  const S=()=>W<600?.72:1,CAP=()=>W<600?200:340,MAXBOX=()=>W<600?10:24;
+  const S=()=>W<600?.72:1,CAP=()=>W<600?240:420,MAXBOX=()=>W<600?14:32;
   const piv=()=>({x:W/2,y:H-78*S()});
   const ease=t=>1-Math.pow(1-t,3);
   const layer=document.createElement('div');layer.style.cssText='position:fixed;inset:0;pointer-events:none;z-index:98;contain:layout style;overflow:visible';document.body.appendChild(layer);
@@ -1046,9 +1046,9 @@ if(!reduce)requestAnimationFrame(loop);
       query(b.x-r,b.y+sy-r,b.x+r,b.y+sy+r,e=>{if(b.ghost)return;
         const st=e.pic||e.bx?{x:e.x+e.w/2,y:e.y-sy+e.h/2,a:0,hw:e.w/2,hh:e.h/2}:{x:e.x+e.w/2,y:e.y-sy+e.h/2,a:0,hw:e.w*.42,hh:e.h*.32};
         const c=sat(b,st,b.v,verts(st));if(!c)return;const sp=Math.hypot(b.vx,b.vy),heavy=b.kind!=='L';
-        if(!e.pic&&!e.bx&&sp>6&&b.brk<(heavy?12:5)&&b.gen<3){if(breakLetter(e,b.vx*.55+(R()-.5)*2.5,b.vy*.35-R()*2.5,b.gen+1)){b.brk++;b.vx*=.72;b.vy*=.62;spark(c.px,c.py,'#d9503f');return}}
-        if(e.bx&&heavy&&sp>9&&b.gen<3){if(breakBox(e,b.vx*.5,b.vy*.4,(R()-.5)*.06,b.gen+1)){b.vx*=.6;b.vy*=.5;return}}
-        if(e.pic&&heavy&&sp>13){shatter(e,c.px,c.py,.6);return}
+        if(!e.pic&&!e.bx&&sp>5&&b.brk<(heavy?16:6)&&b.gen<3){if(breakLetter(e,b.vx*.55+(R()-.5)*2.5,b.vy*.35-R()*2.5,b.gen+1)){b.brk++;b.vx*=.72;b.vy*=.62;spark(c.px,c.py,'#d9503f');return}}
+        if(e.bx&&heavy&&sp>7.5&&b.gen<3){if(breakBox(e,b.vx*.5,b.vy*.4,(R()-.5)*.06,b.gen+1)){b.vx*=.6;b.vy*=.5;return}}
+        if(e.pic&&heavy&&sp>11){shatter(e,c.px,c.py,.6);return}
         const imp=resolve(b,st,c,.3,.12);b.touch=1;if(imp>3)spark(c.px,c.py,e.pic?'#7fdca4':'#c89b2c');b.v=verts(b)})}
     // screen edges
     for(const b of live){if(b.sl>30)continue;for(const [s,vs] of [[floor,vF],[wl,vL],[wr,vR]]){const c=sat(b,s,b.v,vs);if(c){resolve(b,s,c,s===floor?.2:.4,.6);if(s===floor){b.floor=1;b.ghost=1}b.v=verts(b)}}
@@ -1082,20 +1082,20 @@ if(!reduce)requestAnimationFrame(loop);
     shake=Math.min(16,shake+(big?10:4));
     const now=performance.now();combo=now-lastHit<1600?combo+1:1;lastHit=now;hits++;
     if(!built)build();
-    const R0=big?135:72,hitL=[],hitB=[];
-    query(tx-R0,ty+sy-R0,tx+R0,ty+sy+R0,e=>{const ex=e.x,ey=e.y-sy,inside=tx>=ex-14&&tx<=ex+e.w+14&&ty>=ey-14&&ty<=ey+e.h+14;
+    const R0=big?170:96,hitL=[],hitB=[];
+    query(tx-R0,ty+sy-R0,tx+R0,ty+sy+R0,e=>{const ex=e.x,ey=e.y-sy,inside=tx>=ex-30&&tx<=ex+e.w+30&&ty>=ey-30&&ty<=ey+e.h+30;
       if(e.pic){if(inside)shatter(e,tx,ty,F);return}
       const cx=ex+e.w/2,cy=ey+e.h/2;
-      if(e.bx){const nx=cl(tx,ex,ex+e.w),ny=cl(ty,ey,ey+e.h),d=Math.hypot(tx-nx,ty-ny);if(inside||(e.w*e.h<14000&&d<R0*.8))hitB.push([d,e,cx,cy]);return}
+      if(e.bx){const nx=cl(tx,ex,ex+e.w),ny=cl(ty,ey,ey+e.h),d=Math.hypot(tx-nx,ty-ny);if(inside||(e.w*e.h<24000&&d<R0))hitB.push([d,e,cx,cy]);return}
       const d=Math.hypot(cx-tx,cy-ty);if(d<R0)hitL.push([d,e,cx,cy])});
     let n=0;
-    for(const [d,e,cx,cy] of hitB){const dd=Math.hypot(cx-tx,cy-ty)+1,small=e.w*e.h<14000,v=(small?7:4)*F*(1-Math.min(.7,d/R0));
+    for(const [d,e,cx,cy] of hitB){const dd=Math.hypot(cx-tx,cy-ty)+1,small=e.w*e.h<24000,v=(small?7:4)*F*(1-Math.min(.7,d/R0));
       if(breakBox(e,(cx-tx)/dd*v+(R()-.5)*2,(cy-ty)/dd*v-3-R()*2,((tx-cx)/(e.w+1))*-.12+(R()-.5)*.04,0))n+=3}
     hitL.sort((a,b)=>a[0]-b[0]);
-    for(const [d,e,cx,cy] of hitL.slice(0,big?150:70)){const v=(1-d/R0)*9*F+2.5,dd=d+1;if(breakLetter(e,(cx-tx)/dd*v+(R()-.5)*2,(cy-ty)/dd*v-2.5-R()*3,0))n++}
+    for(const [d,e,cx,cy] of hitL.slice(0,big?200:110)){const v=(1-d/R0)*10*F+3,dd=d+1;if(breakLetter(e,(cx-tx)/dd*v+(R()-.5)*2,(cy-ty)/dd*v-2.5-R()*3,0))n++}
     score+=1+n;
     if(combo>2)pops.push({x:tx,y:ty-24,t:`×${combo}`,l:1,c:'#8a6610',z:16});
-    for(const d of drones)if(!d.dead&&Math.hypot(d.x-tx,d.y-ty)<(big?120:46)*S())kill(d)}
+    for(const d of drones)if(!d.dead&&Math.hypot(d.x-tx,d.y-ty)<(big?120:52)*S())kill(d)}
   function kill(d){d.dead=1;kills++;score+=50;shake=Math.min(16,shake+8);
     for(let i=0;i<40;i++){const a=R()*6.283,v=3+R()*8;P.push({x:d.x,y:d.y,vx:Math.cos(a)*v,vy:Math.sin(a)*v,l:1.1,c:i%3?'#e2b84a':'#d9503f',g:.12,sz:2.4})}
     rings.push({x:d.x,y:d.y,r:8,l:1,w:5,c:'#e2b84a',s:1.8});pops.push({x:d.x,y:d.y-30,t:'+50',l:1.2,c:'#1e6b50',z:22});
